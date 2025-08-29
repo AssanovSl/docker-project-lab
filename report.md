@@ -119,6 +119,7 @@ IP адрес контейнера - **172.17.0.2**
 
 
 ## Part 3. Мини веб-сервер ##  
+Файлы о которых пойдет речь:   [03_server/](https://github.com/AssanovSl/docker-project-lab/tree/main/03_server)  
 * **Сервер на C**  
 Написал сервер на c.  Где код в цикле принимает запрос, формирует ответ с заголовком и HTML.  
 ![Server](./img/my-server_code.png)
@@ -138,6 +139,7 @@ IP адрес контейнера - **172.17.0.2**
 ![Nginx test](./img/my-server_nginx-test.png)  
 
 ## Part 4. Докер-образ ##  
+Файлы о которых пойдет речь:   [04_dockerfile-basik/](https://github.com/AssanovSl/docker-project-lab/tree/main/04_dockerfile-basik)  
 * **Создание докер-файла**  
 За основу образа свзял nginx:alpine,  после чего скопировал необходимые файлы а именно **server.c** и конфиг **nginx.conf**  
 Указал рабочей диррикторией **/app** куда скопирован файл сервера. Что бы командый в RUN выполнялись корректно.  
@@ -174,6 +176,7 @@ IP адрес контейнера - **172.17.0.2**
 Из скриншота виден коректный вывод, как localhost, так и localhost/status  
 
 ## Part 5. Проверка образа ##  
+Файлы о которых пойдет речь:   [05_dockerfile-secure/](https://github.com/AssanovSl/docker-project-lab/tree/main/05_dockerfile-secure)  
 * Устанавливаю **Dockle** — это инструмент для анализа безопасности Docker-образов  
 Не входит в стандартный Docker, потому устанавливаю командой. Скачаю архив с репозитория ```curl -L https://github.com/goodwithtech/dockle/releases/download/v0.4.15/dockle_0.4.15_Linux-64bit.tar.gz -o dockle.tar.gz```  
 Распаковываю архив, и перемащаю файл **dockle** в **/usr/local/bin**  
@@ -194,6 +197,7 @@ IP адрес контейнера - **172.17.0.2**
 ![Dockle](./img/dockle_images-build.png)  
 
 ## Part 6. Базовый Docker Compose ##
+Файлы о которых пойдет речь:   [06_docker-compose/](https://github.com/AssanovSl/docker-project-lab/tree/main/06_docker-compose)  
 * Написал **docker-compose.yml**  
 ![Docker compose](./img/docker-compose.png)  
 **docker-compose** — это инструмент, который позволяет описать несколько сервисов (контейнеров) в одном YAML-файле и управлять ими как единой системой.  
