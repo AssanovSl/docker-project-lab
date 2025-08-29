@@ -139,7 +139,7 @@ IP адрес контейнера - **172.17.0.2**
 ![Nginx test](./img/my-server_nginx-test.png)  
 
 ## Part 4. Докер-образ ##  
-Файлы о которых пойдет речь:   [04_dockerfile-basik/](https://github.com/AssanovSl/docker-project-lab/tree/main/04_dockerfile-basik)  
+Файлы о которых пойдет речь:   [04_dockerfile-basic/](https://github.com/AssanovSl/docker-project-lab/tree/main/04_dockerfile-basic)  
 * **Создание докер-файла**  
 За основу образа свзял nginx:alpine,  после чего скопировал необходимые файлы а именно **server.c** и конфиг **nginx.conf**  
 Указал рабочей диррикторией **/app** куда скопирован файл сервера. Что бы командый в RUN выполнялись корректно.  
