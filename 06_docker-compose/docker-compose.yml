@@ -1,0 +1,20 @@
+services:
+  app-server:
+    build: .
+    networks:
+      - app-network
+
+  nginx-proxy:
+    image: nginx:alpine
+    ports:
+      - "80:8080"
+    volumes:
+      - ./nginx/proxy_nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - app-network
+    depends_on:
+      - app-server
+
+networks:
+  app-network:
+    driver: bridge
